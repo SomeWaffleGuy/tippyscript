@@ -12,7 +12,7 @@ dnf install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
 dnf install steam wine-dxvk unrar zip curl cabextract xorg-x11-font-utils fontconfig mpv youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils
 rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 ##Use for Intel GPU
-#dnf install intel-media-driver
+#dnf install intel-media-driver libvdpau-va-gl
 ##Use for Nvidia GPU
 #dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda vulkan xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver
 #grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'
