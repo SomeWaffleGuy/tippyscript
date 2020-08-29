@@ -2,7 +2,7 @@
 #TippyScript: Fedora setup script
 #CURRENT VERSION: 32
 #USE ON NEWER/OLDER VERSIONS AT OWN RISK
-rpm-ostree install steam wine-dxvk unrar cabextract libdvdcss mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils neofetch nextcloud
+rpm-ostree install steam wine-dxvk unrar cabextract libdvdcss mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch nextcloud
 ##Use for laptop
 #rpm-ostree install powertop tlp thermald
 ##Use for ThinkPad
