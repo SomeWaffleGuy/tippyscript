@@ -8,7 +8,7 @@ rpm-ostree install steam wine-dxvk unrar cabextract libdvdcss mozilla-openh264 c
 ##Use for ThinkPad
 #rpm-ostree install thinkfan
 ##Use for Intel GPU
-#rpm-ostree install intel-media-driver
+#rpm-ostree install intel-media-driver libvdpau-va-gl
 ##Use for Nvidia GPU
 #rpm-ostree install akmod-nvidia xorg-x11-drv-nvidia-cuda vulkan xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver
 #grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'
