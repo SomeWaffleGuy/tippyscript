@@ -9,7 +9,7 @@ dnf upgrade
 dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 dnf groupupdate sound-and-video
 dnf install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
-dnf install steam wine-dxvk unrar zip curl cabextract xorg-x11-font-utils fontconfig mpv youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils
+dnf install steam wine-dxvk unrar zip curl cabextract xorg-x11-font-utils fontconfig mpv youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils neofetch nextcloud
 rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 ##Use for Intel GPU
 #dnf install intel-media-driver libvdpau-va-gl
