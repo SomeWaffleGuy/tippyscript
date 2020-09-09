@@ -71,7 +71,7 @@ $(tput sgr 0)"
   gsettings set org.gnome.desktop.interface clock-format '12h'
   gsettings set org.gnome.nautilus.preferences show-create-link 'true'
   gsettings set org.gnome.nautilus.preferences thumbnail-limit '4096'
-  settings set org.gnome.nautilus.icon-view default-zoom-level 'standard'
+  gsettings set org.gnome.nautilus.icon-view default-zoom-level 'standard'
   echo -n "$(tput setaf 2)$(tput bold)Use dark theme? (Y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
