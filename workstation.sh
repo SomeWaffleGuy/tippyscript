@@ -36,10 +36,10 @@ if echo "$answer" | grep -iq "^y" ;then
     dnf -y install nextcloud-client
   fi
   echo -n "$(tput setaf 2)$(tput bold)Select your GPU
-  1: Intel
-  2: AMD
-  3: NVIDIA
-  $(tput sgr 0)"
+1: Intel
+2: AMD
+3: NVIDIA
+$(tput sgr 0)"
   read answer
   if echo "$answer" | grep -iq "^1" ;then
     dnf -y install intel-media-driver mesa-vulkan-drivers libvdpau-va-gl
@@ -53,7 +53,7 @@ if echo "$answer" | grep -iq "^y" ;then
   echo "$(tput setaf 2)$(tput bold)Enabling Flathub$(tput sgr 0)"
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   echo "$(tput setaf 2)$(tput bold)NOTE: Firefox supports hardware acceleration on ALL GPUs and hardware accelerated video on Intel/AMD since version 80. Please refer to:
-  https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
-  For more information on enabling it (WebRender is worth enabling even on NVIDIA)$(tput sgr 0) "
+https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
+For more information on enabling it (WebRender is worth enabling even on NVIDIA)$(tput sgr 0) "
 fi
 exit 0
