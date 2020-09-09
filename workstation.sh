@@ -23,15 +23,10 @@ dnf -y groupupdate sound-and-video
 echo "$(tput setaf 2)$(tput bold)Adding RPMFusion tainted repos$(tput sgr 0)"
 dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
 dnf -y install wine-dxvk unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan vulkan-loader vulkan-tools
-echo -n "$(tput setaf 2)$(tput bold)Install Steam?$(tput sgr 0) "
+echo -n "$(tput setaf 2)$(tput bold)Install Gaming Software (Steam, Lutris, Discord)?$(tput sgr 0) "
 read answer
 if echo "$answer" | grep -iq "^y" ;then
-  dnf -y install steam
-fi
-echo -n "$(tput setaf 2)$(tput bold)Install Discord?$(tput sgr 0) "
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-  dnf -y install discord
+  dnf -y install steam lutris discord
 fi
 echo -n "$(tput setaf 2)$(tput bold)Install Nextcloud Client?$(tput sgr 0) "
 read answer
