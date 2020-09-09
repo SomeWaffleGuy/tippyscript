@@ -24,7 +24,7 @@ if echo "$answer" | grep -iq "^y" ;then
   dnf -y groupupdate sound-and-video
   echo "$(tput setaf 2)$(tput bold)Adding RPMFusion tainted repos$(tput sgr 0)"
   dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
-  dnf -y install wine-dxvk unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan vulkan-loader vulkan-tools gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
+  dnf -y install wine-dxvk unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
   echo -n "$(tput setaf 2)$(tput bold)Install Gaming Software (Steam, Lutris, Discord)? (Y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
@@ -48,7 +48,6 @@ $(tput sgr 0)"
     echo "$(tput setaf 2)$(tput bold)Additional configuration may be required to use the AMDGPU driver. I do not have a modern AMD GPU for testing.$(tput sgr 0) "
   elif echo "$answer" | grep -iq "^3" ;then
     dnf -y install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver
-    grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'
   fi
   echo "$(tput setaf 2)$(tput bold)Enabling Flathub$(tput sgr 0)"
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
