@@ -52,6 +52,12 @@ $(tput sgr 0)"
   fi
   echo "$(tput setaf 2)$(tput bold)Enabling Flathub$(tput sgr 0)"
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  echo -n "$(tput setaf 2)$(tput bold)Enable S32LE in PulseAudio? (Generally fine for modern systems, skip if unsure) (Y/N)$(tput sgr 0) "
+  read answer
+  if echo "$answer" | grep -iq "^y" ;then
+    sudo sed -i "s/; default-sample-format = s16le/default-sample-format = s32le/g" /etc/pulse/daemon.conf
+    sudo sed -i "s/; resample-method = speex-float-1/resample-method = speex-float-10/g" /etc/pulse/daemon.conf
+    sudo sed -i "s/; avoid-resampling = false/avoid-resampling = true/g" /etc/pulse/daemon.conf
   echo "$(tput setaf 2)$(tput bold)NOTE: Firefox supports hardware acceleration on ALL GPUs and hardware accelerated video on Intel/AMD since version 80. Please refer to:
 https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
 For more information on enabling it (WebRender is worth enabling even on NVIDIA)$(tput sgr 0) "
