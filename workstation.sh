@@ -4,8 +4,8 @@
 #USE ON NEWER/OLDER VERSIONS AT OWN RISK
 echo "$(tput setaf 2)$(tput bold)Uninstalling useless GNOME parts$(tput sgr 0)"
 dnf -y remove gnome-maps gnome-boxes totem gnome-photos libreoffice*
-echo "$(tput setaf 2)$(tput bold)Making sure wget is installed$(tput sgr 0)"
-dnf -y install wget
+echo "$(tput setaf 2)$(tput bold)Making sure wget and font prerequisites are installed$(tput sgr 0)"
+dnf -y install wget cabextract xorg-x11-font-utils fontconfig
 echo "$(tput setaf 2)$(tput bold)Downloading and installing RPMFusion and MS Fonts$(tput sgr 0)"
 wget https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 wget https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -20,7 +20,22 @@ dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=Packag
 dnf -y groupupdate sound-and-video
 echo "$(tput setaf 2)$(tput bold)Adding RPMFusion tainted repos$(tput sgr 0)"
 dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
-dnf -y install steam wine-dxvk unrar zip curl cabextract xorg-x11-font-utils fontconfig mpv youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch nextcloud-client
+dnf -y install wine-dxvk unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch
+echo -n "$(tput setaf 2)$(tput bold)Install Steam?$(tput sgr 0) "
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+  dnf -y install steam nextcloud-client
+fi
+echo -n "$(tput setaf 2)$(tput bold)Install Discord?$(tput sgr 0) "
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+  dnf -y install discord
+fi
+echo -n "$(tput setaf 2)$(tput bold)Install Nextcloud Client?$(tput sgr 0) "
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+  dnf -y install nextcloud-client
+fi
 echo -n "$(tput setaf 2)$(tput bold)Install Intel Media Driver? (VAAPI support for Intel GPUs)$(tput sgr 0) "
 read answer
 if echo "$answer" | grep -iq "^y" ;then
