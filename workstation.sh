@@ -1,4 +1,4 @@
-#/bin/sh
+#/bin/bash
 #TippyScript: Fedora setup script
 #CURRENT VERSION: 32
 #USE ON NEWER/OLDER VERSIONS AT OWN RISK
