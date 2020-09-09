@@ -58,7 +58,9 @@ $(tput sgr 0)"
     sudo sed -i "s/; resample-method = speex-float-1/resample-method = speex-float-10/g" /etc/pulse/daemon.conf
     sudo sed -i "s/; avoid-resampling = false/avoid-resampling = true/g" /etc/pulse/daemon.conf
   fi
+  echo "$(tput setaf 2)$(tput bold)Restarting GNOME Shell$(tput sgr 0)"
   busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
+  sleep 3
   echo "$(tput setaf 2)$(tput bold)Making GNOME more useable...$(tput sgr 0)"
   gnome-extensions disable background-logo@fedorahosted.org
   gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
@@ -72,6 +74,8 @@ $(tput sgr 0)"
   gsettings set org.gnome.nautilus.preferences show-create-link 'true'
   gsettings set org.gnome.nautilus.preferences thumbnail-limit '4096'
   gsettings set org.gnome.nautilus.icon-view default-zoom-level 'standard'
+  gsettings set org.gnome.gedit.preferences.editor bracket-matching 'false'
+  gsettings set org.gnome.gedit.preferences.editor highlight-current-line 'false'
   echo -n "$(tput setaf 2)$(tput bold)Use dark theme? (Y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
