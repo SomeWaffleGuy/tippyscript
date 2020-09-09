@@ -7,6 +7,6 @@ Should (mostly) work and provide a basic useable system
 
 ```
 wget https://raw.githubusercontent.com/SomeWaffleGuy/tippyscript/master/workstation.sh
-chmod +x run.sh
+chmod +x workstation.sh
 sudo ./workstation.sh
 ```
