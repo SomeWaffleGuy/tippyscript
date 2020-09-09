@@ -64,8 +64,14 @@ $(tput sgr 0)"
   gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
   gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
   gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
-  gsettings set org.gnome.desktop.interface clock-show-date true
-  gsettings set org.gnome.desktop.interface clock-show-weekday true
+  gsettings set org.gnome.desktop.interface clock-show-date 'true'
+  gsettings set org.gnome.desktop.interface clock-show-weekday 'true'
+  gsettings set org.gnome.desktop.interface enable-hot-corners 'false'
+  gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
+  gsettings set org.gnome.desktop.interface clock-format '12h'
+  gsettings set org.gnome.nautilus.preferences show-create-link 'true'
+  gsettings set org.gnome.nautilus.preferences thumbnail-limit '4096'
+  settings set org.gnome.nautilus.icon-view default-zoom-level 'standard'
   echo -n "$(tput setaf 2)$(tput bold)Use dark theme? (Y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
