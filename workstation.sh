@@ -13,9 +13,9 @@ dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
 dnf -y install steam wine-dxvk unrar zip curl cabextract xorg-x11-font-utils fontconfig mpv youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch nextcloud-client
 dnf -y install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm'
 ##Use for Intel GPU
-#sudo su -c 'dnf install intel-media-driver libvdpau-va-gl'
+#dnf -y install intel-media-driver libvdpau-va-gl
 ##Use for Nvidia GPU
-#sudo su -c 'dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda vulkan xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver'
-#sudo su -c "grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'"
+#dnf -y install akmod-nvidia xorg-x11-drv-nvidia-cuda vulkan xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver
+#grubby --update-kernel=ALL --args='nvidia-drm.modeset=1'
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 exit 0
