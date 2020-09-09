@@ -24,7 +24,7 @@ if echo "$answer" | grep -iq "^y" ;then
   dnf -y groupupdate sound-and-video
   echo "$(tput setaf 2)$(tput bold)Adding RPMFusion tainted repos$(tput sgr 0)"
   dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
-  dnf -y install wine-dxvk unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
+  dnf -y install wine-dxvk gnome-tweaks unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
   echo -n "$(tput setaf 2)$(tput bold)Install Gaming Software (Steam, Lutris, Discord)? (Y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
