@@ -103,6 +103,7 @@ $(tput sgr 0)"
     gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
   fi
     sudo mkdir /etc/dconf/db/gdm.d/
+# Setting 12h time has mixed results in GDM. I cannot find out why or how to fix it. GDM is the worst documented software on the Internet.
   echo -n "$(tput setaf 2)$(tput bold)Use 12 hour time? 
 (y/N)$(tput sgr 0) "
   read answer
