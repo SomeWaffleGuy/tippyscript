@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/SomeWaffleGuy/tippyscript/master/workstat
 chmod +x workstation.sh
 ./workstation.sh
 ```
-### Configuration Tips
+# Configuration Tips
 ### Celluloid
 
 Celluloid does NOT default to hardware decoding. In order to activate it for Intel/AMD, add the following to 'Extra MPV options'
