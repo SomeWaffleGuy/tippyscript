@@ -72,6 +72,14 @@ Where [DEVICE] is the output of your higher refresh rate monitor (DP-4 or HDMI-2
 
 GSYNC is NOT supported in multi-monitor configurations for the time being, however, as NVIDIA support for Wayland improves and becomes usable, this may change and (hopefully) make this section obsolete.
 
+### Themes
+
+Theming is a waste of time and Adwaita/Adwaita-Dark look fine.
+
+But if you insist, Fedora does have various themes in its repos, and many more out there through build systems.
+
+Be sure to install the Flatpak version of whatever theme you apply for a consistent look.
+
 # Additional Scripts
 If you use Debian (as I used to), check out the far lower quality;
 
