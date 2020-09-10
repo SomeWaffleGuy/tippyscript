@@ -42,11 +42,11 @@ $(tput sgr 0)$(tput setaf 1)$(tput bold)LEGAL RESTRICTIONS MAY APPLY (E.g. in th
       sudo dnf -y install libdvdcss
     fi
   fi
-  echo -n "$(tput setaf 2)$(tput bold)Install Gaming Software (Steam, Lutris, Discord)? 
+  echo -n "$(tput setaf 2)$(tput bold)Install Gaming Software (Steam, Lutris)? 
 (y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
-    sudo dnf -y install steam lutris discord
+    sudo dnf -y install steam lutris
   fi
   echo -n "$(tput setaf 2)$(tput bold)Install Nextcloud Client? 
 (y/N)$(tput sgr 0) "
