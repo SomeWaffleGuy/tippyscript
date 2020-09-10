@@ -88,5 +88,6 @@ $(tput sgr 0)"
   echo "$(tput setaf 2)$(tput bold)NOTE: Firefox supports hardware acceleration on ALL GPUs and hardware accelerated video on Intel/AMD since version 80. Please refer to:
 https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
 For more information on enabling it (WebRender is worth enabling even on NVIDIA)$(tput sgr 0) "
+  echo "$(tput setaf 2)$(tput bold)RESTART REQUIRED TO COMPLETE SETUP$(tput sgr 0)"
 fi
 exit 0
