@@ -11,6 +11,7 @@ chmod +x workstation.sh
 ./workstation.sh
 ```
 ### Configuration Tips
+### Celluloid
 
 Celluloid does NOT default to hardware decoding. In order to activate it for Intel/AMD, add the following to 'Extra MPV options'
 
@@ -26,10 +27,14 @@ Or for NVIDIA, add;
 
 Any standard MPV options can be added this way, or with a config file.
 
+### Firefox
+
 Firefox supports hardware acceleration on ALL GPUs, and hardware video decoding on Intel/AMD GPUs. Please see;
 
 https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
 
 For more information.
 
-NVIDIA users may still wish to enable WebRender despite the lack of video decoding. DO NOT enable MOZ_X11_EGL on NVIDIA until the transparency bug is addressed.
+NVIDIA users may still wish to enable WebRender despite the lack of video decoding. DO NOT enable MOZ_X11_EGL on NVIDIA until the transparency bug is addressed in Firefox 82. See;
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1650583
