@@ -37,6 +37,7 @@ $(tput sgr 0)$(tput setaf 1)$(tput bold)REPOS CONTAIN SOFTWARE WITH LEGAL RESTRI
     echo -n "$(tput setaf 2)$(tput bold)Enable DVD playback? 
 $(tput sgr 0)$(tput setaf 1)$(tput bold)LEGAL RESTRICTIONS MAY APPLY (E.g. in the USA)$(tput sgr 0)$(tput setaf 2)$(tput bold) 
 (y/N)$(tput sgr 0) "
+    read answer
     if echo "$answer" | grep -iq "^y" ;then
       sudo dnf -y install libdvdcss
     fi
@@ -76,6 +77,22 @@ $(tput sgr 0)"
     sudo sed -i "s/; resample-method = speex-float-1/resample-method = speex-float-10/g" /etc/pulse/daemon.conf
     sudo sed -i "s/; avoid-resampling = false/avoid-resampling = true/g" /etc/pulse/daemon.conf
   fi
+  sudo mkdir /etc/dconf/db/gdm.d/
+  echo -n "$(tput setaf 2)$(tput bold)Set 12 hour time in GDM? 
+(y/N)$(tput sgr 0) "
+  read answer
+  if echo "$answer" | grep -iq "^y" ;then
+    sudo echo "[org/gnome/desktop/interface]
+clock-format='12h'" > /etc/dconf/db/gdm.d/01-12-hour-clock
+  fi
+  echo -n "$(tput setaf 2)$(tput bold)Enable Tap-to-Click for Touchpads in GDM? 
+(y/N)$(tput sgr 0) "
+  read answer
+  if echo "$answer" | grep -iq "^y" ;then
+    sudo echo "[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=true" > /etc/dconf/db/gdm.d/06-tap-to-click
+  fi
+  sudo dconf update
   echo "$(tput setaf 2)$(tput bold)Enabling Flathub$(tput sgr 0)"
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   echo "$(tput setaf 2)$(tput bold)Restarting GNOME Shell$(tput sgr 0)"
