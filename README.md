@@ -25,3 +25,11 @@ Or for NVIDIA, add;
 ```
 
 Any standard MPV options can be added this way, or with a config file.
+
+Firefox supports hardware acceleration on ALL GPUs, and hardware video decoding on Intel/AMD GPUs. Please see;
+
+https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
+
+For more information.
+
+NVIDIA users may still wish to enable WebRender despite the lack of video decoding. DO NOT enable MOZ_X11_EGL on NVIDIA until the transparency bug is addressed.
