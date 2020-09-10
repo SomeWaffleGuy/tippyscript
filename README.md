@@ -72,7 +72,7 @@ Where [DEVICE] is the output of your higher refresh rate monitor (DP-4 or HDMI-2
 
 GSYNC is NOT supported in multi-monitor configurations for the time being, however, as NVIDIA support for Wayland improves and becomes usable, this may change and (hopefully) make this section obsolete.
 
-## Flatpak Applications
+### Flatpak Applications
 
 When installing Flatpak applications, often times there will be a 'Fedora' and a 'Flathub' version. The 'Flathub' versions are more often up-to-date and, as such, I would recommend prefering them.
 
