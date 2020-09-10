@@ -107,8 +107,9 @@ $(tput sgr 0)"
 (y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
-    sudo su -c 'echo "[org/gnome/desktop/interface]
-clock-format='12h'" > /etc/dconf/db/gdm.d/01-12-hour-clock'
+    echo "[org/gnome/desktop/interface]
+clock-format='12h'" > ~/01-12-hour-clock
+sudo mv ~/01-12-hour-clock /etc/dconf/db/gdm.d/
   gsettings set org.gnome.desktop.interface clock-format '12h'
   fi
   echo -n "$(tput setaf 2)$(tput bold)Enable Tap-to-Click for Touchpads? 
