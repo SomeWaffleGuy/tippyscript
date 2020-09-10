@@ -70,7 +70,7 @@ __GL_SYNC_DISPLAY_DEVICE=[DEVICE]
 
 Where [DEVICE] is the output of your higher refresh rate monitor (DP-4 or HDMI-2 for example).
 
-GSYNC is NOT supported in multi-monitor configurations for the time being, however, as NVIDIA support for Wayland improves and becomes usable, this may change.
+GSYNC is NOT supported in multi-monitor configurations for the time being, however, as NVIDIA support for Wayland improves and becomes usable, this may change and (hopefully) make this section obsolete.
 
 # Additional Scripts
 If you use Debian (as I used to), check out the far lower quality;
