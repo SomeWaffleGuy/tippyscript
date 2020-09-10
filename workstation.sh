@@ -2,6 +2,10 @@
 #TippyScript: Fedora setup script
 #CURRENT VERSION: 32
 #USE ON NEWER/OLDER VERSIONS AT OWN RISK
+if [[ $XDG_SESSION_TYPE =  wayland ]]; then
+echo "$(tput setaf 2)$(tput bold)Script MUST be run under Xorg. Please log out and select the GNOME (Xorg) session.$(tput sgr 0) "
+exit 1
+fi
 echo "$(tput setaf 2)$(tput bold)This script will configure a fresh install of Fedora Workstation to be what I consider a useable desktop. This includes Non-Free software and drivers. For best results, run on an up-to-date system.$(tput sgr 0)"
 echo -n "$(tput setaf 2)$(tput bold)Continue? (Y/N)$(tput sgr 0) "
 read answer
