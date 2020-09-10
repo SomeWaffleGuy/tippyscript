@@ -28,6 +28,7 @@ if echo "$answer" | grep -iq "^y" ;then
   sudo dnf -y groupupdate sound-and-video
   echo "$(tput setaf 2)$(tput bold)Adding RPMFusion tainted repos$(tput sgr 0)"
   sudo dnf -y install rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
+  echo "$(tput setaf 2)$(tput bold)Installing typical applications$(tput sgr 0)"
   sudo dnf -y install wine-dxvk evolution gnome-tweaks gnome-shell-extension-appindicator unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libdvdcss libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
   echo -n "$(tput setaf 2)$(tput bold)Install Gaming Software (Steam, Lutris, Discord)? (Y/N)$(tput sgr 0) "
   read answer
@@ -85,9 +86,6 @@ $(tput sgr 0)"
   if echo "$answer" | grep -iq "^y" ;then
     gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
   fi
-  echo "$(tput setaf 2)$(tput bold)NOTE: Firefox supports hardware acceleration on ALL GPUs and hardware accelerated video on Intel/AMD since version 80. Please refer to:
-https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
-For more information on enabling it (WebRender is worth enabling even on NVIDIA)$(tput sgr 0) "
   echo "$(tput setaf 2)$(tput bold)RESTART REQUIRED TO COMPLETE SETUP$(tput sgr 0)"
 fi
 exit 0
