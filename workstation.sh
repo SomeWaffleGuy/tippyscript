@@ -107,16 +107,16 @@ $(tput sgr 0)"
 (y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
-    sudo echo "[org/gnome/desktop/interface]
-clock-format='12h'" > /etc/dconf/db/gdm.d/01-12-hour-clock
+    sudo su -c 'echo "[org/gnome/desktop/interface]
+clock-format='12h'" > /etc/dconf/db/gdm.d/01-12-hour-clock'
   gsettings set org.gnome.desktop.interface clock-format '12h'
   fi
   echo -n "$(tput setaf 2)$(tput bold)Enable Tap-to-Click for Touchpads? 
 (y/N)$(tput sgr 0) "
   read answer
   if echo "$answer" | grep -iq "^y" ;then
-    sudo echo "[org/gnome/desktop/peripherals/touchpad]
-tap-to-click=true" > /etc/dconf/db/gdm.d/06-tap-to-click
+    sudo su -c 'echo "[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=true" > /etc/dconf/db/gdm.d/06-tap-to-click'
   gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click 'true'
   fi
   sudo dconf update
