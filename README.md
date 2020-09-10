@@ -3,13 +3,20 @@ Messy Fedora setup scripts, massively WIP
 
 Should (mostly) work and provide a basic useable system
 
-### Instructions
+### Instructions for Fedora Workstation
 
 ```
 wget https://raw.githubusercontent.com/SomeWaffleGuy/tippyscript/master/workstation.sh
 chmod +x workstation.sh
 ./workstation.sh
 ```
+
+### Instructions for Fedora Silverblue
+
+```
+COMING SOON (TM)
+```
+
 # Configuration Tips
 ### Celluloid
 
