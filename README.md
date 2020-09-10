@@ -38,3 +38,9 @@ For more information.
 NVIDIA users may still wish to enable WebRender right now despite the lack of video decoding. DO NOT enable MOZ_X11_EGL or hardware video decoding on NVIDIA until the transparency bug is addressed in Firefox 82. See;
 
 https://bugzilla.mozilla.org/show_bug.cgi?id=1650583
+
+### Extensions
+
+By default, this script enables the Kstatusnotifieritem/appindicator support extension and disables the Background logo extension. Any and all extensions can be enabled/disabled via the installed GNOME Tweaks application. Many extensions are available in the Fedora repositories, with many more at;
+
+https://extensions.gnome.org/
