@@ -29,7 +29,7 @@ Any standard MPV options can be added this way, or with a config file.
 
 ### Firefox
 
-Firefox supports hardware acceleration on ALL GPUs, and hardware video decoding on Intel/AMD GPUs (Limited support on NVIDIA possible in Firefox 82). Please see;
+Firefox supports hardware acceleration on ALL GPUs, and hardware video decoding on Intel/AMD GPUs (Limited support for NVIDIA is possible in Firefox 82). Please see;
 
 https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration
 
@@ -41,7 +41,7 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1650583
 
 ### Extensions
 
-By default, this script enables the Kstatusnotifieritem/appindicator support extension and disables the Background logo extension. Any and all extensions can be enabled/disabled via the installed GNOME Tweaks application. Many extensions are available in the Fedora repositories, with many more at;
+By default, this script enables the 'Kstatusnotifieritem/appindicator support' extension and disables the 'Background logo' extension. Any and all extensions can be enabled/disabled via the installed GNOME Tweaks application. Many extensions are available in the Fedora repositories, with many more at;
 
 https://extensions.gnome.org/
 
