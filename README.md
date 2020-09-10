@@ -44,3 +44,23 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1650583
 By default, this script enables the Kstatusnotifieritem/appindicator support extension and disables the Background logo extension. Any and all extensions can be enabled/disabled via the installed GNOME Tweaks application. Many extensions are available in the Fedora repositories, with many more at;
 
 https://extensions.gnome.org/
+
+### High Refresh Rate with NVIDIA (More than 60 Hz)
+
+High refresh rate monitors can be used on NVIDIA cards, but require some configuration, especially in mixed refresh rate setups.
+
+For starters, one should set Mutter's default FPS to their target refresh rate by adding the following to /etc/environment;
+```
+CLUTTER_DEFAULT_FPS=[RATE]
+```
+
+Where [RATE] is the target refresh rate.
+
+In mixed refresh rate setups, one shoud also add;
+```
+__GL_SYNC_DISPLAY_DEVICE=[DEVICE]
+```
+
+Where [DEVICE] is the output of your higher refresh rate monitor (DP-4 or HDMI-2 for example).
+
+GSYNC is NOT supported in multi-monitor configurations for the time being, however, as NVIDIA support for Wayland improves and becomes usable, this may change.
