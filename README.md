@@ -3,10 +3,6 @@ Messy Fedora setup scripts, massively WIP
 
 Should (mostly) work and provide a basic useable system
 
-ONLY RUN ON XORG (GNOME restart is required to enable/disable settings properly, currently impossible on Wayland)
-
-Wayland can be switched to post-install on supported hardware
-
 ### Instructions for Fedora Workstation
 
 ```
