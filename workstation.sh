@@ -2,10 +2,6 @@
 #TippyScript: Fedora setup script
 #CURRENT VERSION: 32
 #USE ON NEWER/OLDER VERSIONS AT OWN RISK
-if [[ $XDG_SESSION_TYPE =  wayland ]]; then
-echo "$(tput setaf 1)$(tput bold)Script MUST be run under Xorg. Please log out and select the GNOME on Xorg session.$(tput sgr 0) "
-exit 1
-fi
 echo "$(tput setaf 2)$(tput bold)This script will configure a fresh install of Fedora Workstation to be what I consider a useable desktop. This includes$(tput sgr 0)$(tput setaf 1)$(tput bold) NON-FREE SOFTWARE AND DRIVERS$(tput sgr 0)$(tput setaf 2)$(tput bold) and suggests software which may be subject to restrictions under local law. $(tput sgr 0)"
 echo -n "$(tput setaf 2)$(tput bold)Continue? 
 (y/N)$(tput sgr 0) "
@@ -79,9 +75,6 @@ $(tput sgr 0)"
   fi
   echo "$(tput setaf 2)$(tput bold)Enabling Flathub$(tput sgr 0)"
   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  echo "$(tput setaf 2)$(tput bold)Restarting GNOME Shell$(tput sgr 0)"
-  busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
-  sleep 3
   echo "$(tput setaf 2)$(tput bold)Making GNOME more useable...$(tput sgr 0)"
   gnome-extensions disable background-logo@fedorahosted.org
   gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
