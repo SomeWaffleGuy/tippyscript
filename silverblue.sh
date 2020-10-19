@@ -14,7 +14,7 @@ if echo "$answer" | grep -iq "^y" ;then
   sudo rpm-ostree install *.rpm
   rm *.rpm
   echo "$(tput setaf 2)$(tput bold)Installing typical applications...$(tput sgr 0)"
-  sudo rpm-ostree install gnome-tweaks mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
+  sudo rpm-ostree install gnome-tweaks mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts powertop tlp thermald
   echo -n "$(tput setaf 2)$(tput bold)Select your GPU
 1: Intel
 2: AMD
