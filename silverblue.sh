@@ -8,13 +8,13 @@ echo -n "$(tput setaf 2)$(tput bold)Continue?
 read answer
 if echo "$answer" | grep -iq "^y" ;then
   echo "$(tput setaf 2)$(tput bold)Checking for system updates...$(tput sgr 0)"
-  sudo rpm-ostree -y upgrade
+  sudo rpm-ostree upgrade
   echo "$(tput setaf 2)$(tput bold)Downloading and installing RPM Fusion$(tput sgr 0)"
   wget https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-  sudo rpm-ostree -y install *.rpm
+  sudo rpm-ostree install *.rpm
   rm *.rpm
   echo "$(tput setaf 2)$(tput bold)Installing typical applications...$(tput sgr 0)"
-  sudo rpm-ostree -y install gnome-tweaks mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
+  sudo rpm-ostree install gnome-tweaks mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
   echo -n "$(tput setaf 2)$(tput bold)Select your GPU
 1: Intel
 2: AMD
@@ -23,12 +23,12 @@ if echo "$answer" | grep -iq "^y" ;then
 $(tput sgr 0)"
   read answer
   if echo "$answer" | grep -iq "^1" ;then
-    sudo rpm-ostree -y install intel-media-driver mesa-vulkan-drivers libvdpau-va-gl
+    sudo rpm-ostree install intel-media-driver mesa-vulkan-drivers libvdpau-va-gl
   elif echo "$answer" | grep -iq "^2" ;then
-    sudo rpm-ostree -y install xorg-x11-drv-amdgpu mesa-vulkan-drivers
+    sudo rpm-ostree install xorg-x11-drv-amdgpu mesa-vulkan-drivers
     echo "$(tput setaf 2)$(tput bold)Additional configuration may be required to use the AMDGPU driver. I do not have a modern AMD GPU for testing.$(tput sgr 0) "
   elif echo "$answer" | grep -iq "^3" ;then
-    sudo rpm-ostree -y install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver
+    sudo rpm-ostree install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs vdpauinfo libva-vdpau-driver
   fi
   echo -n "$(tput setaf 2)$(tput bold)Enable S32LE in PulseAudio? (Generally fine for modern systems, skip if unsure) 
 (y/N)$(tput sgr 0) "
