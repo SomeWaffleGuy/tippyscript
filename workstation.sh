@@ -23,7 +23,7 @@ if echo "$answer" | grep -iq "^y" ;then
   sudo dnf -y groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
   sudo dnf -y groupupdate sound-and-video
   echo "$(tput setaf 2)$(tput bold)Installing typical applications...$(tput sgr 0)"
-  sudo dnf -y install wine-dxvk evolution gnome-tweaks gnome-shell-extension-appindicator unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts
+  sudo dnf -y install wine-dxvk evolution gnome-tweaks gnome-shell-extension-appindicator unrar zip curl celluloid youtube-dl mozilla-openh264 compat-ffmpeg28 ffmpeg-libs libva-utils ffmpegthumbnailer neofetch gstreamer1-vaapi vulkan gdouros-symbola-fonts google-noto-emoji-fonts google-noto-emoji-color-fonts google-android-emoji-fonts powertop tlp thermald
   echo -n "$(tput setaf 2)$(tput bold)Install 'tainted' RPM Fusion repositories? 
 $(tput sgr 0)$(tput setaf 1)$(tput bold)REPOS CONTAIN SOFTWARE WITH LEGAL RESTRICTIONS $(tput sgr 0)$(tput setaf 2)$(tput bold)
 (y/N)$(tput sgr 0) "
