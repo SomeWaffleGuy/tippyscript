@@ -1,6 +1,6 @@
 #/bin/bash
 #TippyScript: Fedora setup script
-#CURRENT VERSION: 32
+#CURRENT VERSION: 33
 #USE ON NEWER/OLDER VERSIONS AT OWN RISK
 echo "$(tput setaf 2)$(tput bold)This script will configure a fresh install of Fedora Workstation to be what I consider a useable desktop. This includes$(tput sgr 0)$(tput setaf 1)$(tput bold) NON-FREE SOFTWARE AND DRIVERS$(tput sgr 0)$(tput setaf 2)$(tput bold) and suggests software which may be subject to restrictions under local law. $(tput sgr 0)"
 echo -n "$(tput setaf 2)$(tput bold)Continue? 
