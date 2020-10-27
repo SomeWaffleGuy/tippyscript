@@ -72,5 +72,4 @@ tap-to-click=true" > /etc/dconf/db/gdm.d/06-tap-to-click'
   fi
   sudo dconf update
   echo "$(tput setaf 2)$(tput bold)RESTART REQUIRED TO COMPLETE SETUP$(tput sgr 0)"
-fi
 exit 0
