@@ -82,7 +82,7 @@ GSYNC is NOT supported in multi-monitor configurations for the time being, howev
 
 ### Flatpak Applications
 
-When installing Flatpak applications, often times there will be a 'Fedora' and a 'Flathub' version. The 'Flathub' versions are more often up-to-date and, as such, I would recommend prefering them.
+When installing Flatpak applications, often times there will be a 'Fedora' and a 'Flathub' version. The 'Flathub' versions are more often up-to-date and, as such, I would recommend prefering them EXCEPT for in the case of GNOME system applications for Silverblue.
 
 ### Themes
 
