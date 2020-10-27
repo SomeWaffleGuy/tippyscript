@@ -19,7 +19,9 @@ wget https://raw.githubusercontent.com/SomeWaffleGuy/tippyscript/master/silverbl
 chmod +x silverblue_a.sh
 chmod +x silverblue_b.sh
 ./silverblue_a.sh
+
 FOLLOWING A RESTART
+
 ./silverblue_b.sh
 ```
 
