@@ -92,6 +92,10 @@ But if you insist, Fedora does have various themes in its repos, and many more o
 
 Be sure to install the Flatpak version of whatever theme you apply for a consistent look.
 
+### KDE Script
+
+This script is provided "as is" to an even greater extent than the rest. I don't use KDE, but it should work fine.
+
 # Additional Scripts
 If you use Debian (as I used to), check out the far lower quality;
 
