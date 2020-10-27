@@ -56,7 +56,7 @@ NVIDIA users may still wish to enable WebRender right now despite the lack of vi
 
 ### Extensions
 
-By default, this script enables the 'Kstatusnotifieritem/appindicator support' extension and disables the 'Background logo' extension. Any and all extensions can be enabled/disabled via the installed GNOME Tweaks application. Many extensions are available in the Fedora repositories, with many more at;
+By default, this script enables the 'Kstatusnotifieritem/appindicator support' extension (only in Workstation) and disables the 'Background logo' extension. Any and all extensions can be enabled/disabled via the installed GNOME Tweaks application. Many extensions are available in the Fedora repositories, with many more at;
 
 https://extensions.gnome.org/
 
