@@ -14,8 +14,16 @@ chmod +x workstation.sh
 ### Instructions for Fedora Silverblue
 
 ```
-COMING SOON (TM)
+wget https://raw.githubusercontent.com/SomeWaffleGuy/tippyscript/master/silverblue_a.sh
+wget https://raw.githubusercontent.com/SomeWaffleGuy/tippyscript/master/silverblue_b.sh
+chmod +x silverblue_a.sh
+chmod +x silverblue_b.sh
+./silverblue_a.sh
+FOLLOWING A RESTART
+./silverblue_b.sh
 ```
+
+Silverblue requires a restart for overlay packages to apply, which includes RPM Fusion. The script needs to be run in parts, although there is an experimental way to apply changes without a reboot, it is unsupported for now, and thus not used.
 
 # Configuration Tips
 ### Celluloid
