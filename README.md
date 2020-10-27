@@ -78,7 +78,9 @@ __GL_SYNC_DISPLAY_DEVICE=[DEVICE]
 
 Where [DEVICE] is the output of your higher refresh rate monitor (DP-4 or HDMI-2 for example).
 
-GSYNC is NOT supported in multi-monitor configurations for the time being, however, as NVIDIA support for Wayland improves and becomes usable, this may change and (hopefully) make this section obsolete.
+GSYNC, while supported, can only be used on one monitor at a time. This SHOULD apply to multi-monitor configurations (with only one monitor actively being synced to) for well made fullscreen applications. For more information see;
+
+https://wiki.archlinux.org/index.php/Variable_refresh_rate
 
 ### Flatpak Applications
 
