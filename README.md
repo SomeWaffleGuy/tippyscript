@@ -99,6 +99,6 @@ Be sure to install the Flatpak version of whatever theme you apply for a consist
 This script is provided "as is" to an even greater extent than the rest. I don't use KDE, but it should work fine.
 
 # Additional Scripts
-If you use Debian (as I used to), check out the far lower quality;
+If you use Debian (as I currently do), check out;
 
 https://github.com/SomeWaffleGuy/debscript
